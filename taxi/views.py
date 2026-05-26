@@ -17,7 +17,6 @@ def logout_view(request):
 def index(request):
     """View function for the home page of the site."""
 
-    request.session["test"] = "test session"
     num_visits = request.session.get("num_visits", 0) + 1
     request.session["num_visits"] = num_visits
 
